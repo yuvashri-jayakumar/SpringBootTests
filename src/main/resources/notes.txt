@@ -1,3 +1,29 @@
+
+
+
+##WebMvcTest##
+This is for testing controller classes
+
+##SpringBootTest##
+Loads all the resources in the application context
+it looks for the SpringBootApplication annotation in the mentioned package.
+If not found, it will go through root package and search in all other classes
+Once It find the SpringBootApplication class, it loads all the dependency resources in context
+
+##DataJpaTest##
+This is for repository
+
+##Order of execution of the resource in test##
+1. TestPropertySource -> file mentioned in test case
+2. application.properties in test/main/resources
+3. application.properties in src/main/resources
+
+
+##Assertions##
+Hamcrest
+JAssert
+JsonPath
+
 ##JSONPATH###
 $	The root element to query. This starts all path expressions.
 @	The current node being processed by a filter predicate.
@@ -11,15 +37,3 @@ $	The root element to query. This starts all path expressions.
 
 Example
 $.greeting -> $ refers root element greeting refers child element
-
-
-##WebMvcTest##
-This is for testing controller classes
-
-##SpringBootTest##
-Loads all the resources in the application context
-it looks for the package
-
-##DataJpaTest##
-Thsis is for repository
-
